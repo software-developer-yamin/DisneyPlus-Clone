@@ -11,5 +11,9 @@ export default NextAuth({
                clientSecret: process.env.GOOGLE_CLIENT_SECRET
           }),
      ],
-     adapter: FirebaseAdapter({ db, collection, query, getDocs, where, limit, doc, getDoc, addDoc, updateDoc, deleteDoc, runTransaction, serverTimestamp }),     
+     adapter: FirebaseAdapter({ db, collection, query, getDocs, where, limit, doc, getDoc, addDoc, updateDoc, deleteDoc, runTransaction, serverTimestamp }),
+     secret: process.env.SECRET_AUTH_KEY,
+     jwt: {
+          encryption: true
+     },
 })
