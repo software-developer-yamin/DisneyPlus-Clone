@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+     body {
+          @apply bg-[#040714] text-[#f9f9f9] font-body scrollbar-hide ;
+     }
+}
+
+@layer components {
+     .header-link {
+          @apply flex items-center cursor-pointer space-x-2
+     }
+     .span {
+          @apply relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:h-0.5 before:absolute before:-bottom-1.5 before:inset-x-0 before:rounded-bl before:origin-left before:transform before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100 ;
+     }
+     .brand {
+          @apply flex relative w-52 h-32 sm:w-64 sm:h-36 border-[3px] border-[#f9f9f9] border-opacity-10 rounded-lg cursor-pointer shadow-xl overflow-hidden  hover:border-opacity-80 hover:shadow-2xl transform hover:scale-105 transition duration-300;
+     }
+     .background-home {
+          @apply relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1];
+     }
+     .thumbnail {
+          @apply flex items-center min-w-[250px] min-h-[160px] md:min-w-[330px] md:min-h-[210px] border-[3px] justify-center rounded-lg border-[#f9f9f9] border-opacity-10 hover:border-opacity-80 hover:shadow-2xl transition duration-300 transform hover:scale-105 overflow-hidden shadow-xl ease-in-out cursor-pointer
+     }
+}
